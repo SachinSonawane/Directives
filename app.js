@@ -4,8 +4,8 @@
  var app = angular.module('app', []);
 
  app.controller('ctrl', function ($scope) {
-     $scope.callInController = function () {
-         alert("calling in main controller");
+     $scope.callInController = function (city) {
+         alert("calling in main controller- "+city);
      }
 
      $scope.name = 'sachin';
@@ -40,10 +40,7 @@
              callBack: '&'
          },
          link: function (scope, iElement, iAttribute) {
-             console.log('calling', scope.oneWay);
-             scope.call = function () {
-                 alert("calling in directive");
-             }
+
          }
      }
  })

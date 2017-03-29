@@ -9,6 +9,6 @@
 <body ng-controller="ctrl">
     Name - <input type="text" ng-model="name"><br><br>
     City - <input type="text" ng-model="city"><br><br>
-    <custom-dir one-way="name" two-way="city" call-back="callInController()"></custom-dir>
+    <custom-dir one-way="{{name}}" two-way="city" call-back="callInController(twoWay)"></custom-dir>
 </body>
 </html>
